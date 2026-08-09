@@ -1,9 +1,28 @@
 "use client";
 
-import { type ReactNode, useEffect } from "react";
+import type Lenis from "lenis";
+import {
+  createContext,
+  type ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import "lenis/dist/lenis.css";
+
+const LenisContext = createContext<Lenis | null>(null);
+
+/**
+ * The live Lenis instance, or `null` whenever smooth scrolling is not running:
+ * the reader prefers reduced motion, or the chunk has not loaded yet. Anything
+ * that scrolls programmatically has to handle both, because `null` means the
+ * document scrolls natively.
+ */
+export function useLenis(): Lenis | null {
+  return useContext(LenisContext);
+}
 
 /**
  * Smooth scrolling, driven from the GSAP ticker so Lenis and ScrollTrigger
@@ -15,6 +34,7 @@ import "lenis/dist/lenis.css";
  */
 export function LenisProvider({ children }: { children: ReactNode }) {
   const reducedMotion = useReducedMotion();
+  const [lenis, setLenis] = useState<Lenis | null>(null);
 
   useEffect(() => {
     // `!== false` on purpose: `null` means the preference has not been read
@@ -33,19 +53,21 @@ export function LenisProvider({ children }: { children: ReactNode }) {
       // The effect may have been cleaned up while the chunks were loading.
       if (cancelled) return;
 
-      const lenis = new Lenis({ autoRaf: false });
-      lenis.on("scroll", () => ScrollTrigger.update());
+      const instance = new Lenis({ autoRaf: false });
+      instance.on("scroll", () => ScrollTrigger.update());
 
       // gsap.ticker reports time in SECONDS, Lenis expects MILLISECONDS.
-      const raf = (time: number) => lenis.raf(time * 1000);
+      const raf = (time: number) => instance.raf(time * 1000);
 
       gsap.ticker.add(raf);
       gsap.ticker.lagSmoothing(0);
+      setLenis(instance);
 
       teardown = () => {
         gsap.ticker.remove(raf);
         gsap.ticker.lagSmoothing(500, 33);
-        lenis.destroy();
+        instance.destroy();
+        setLenis(null);
       };
     })();
 
@@ -55,5 +77,7 @@ export function LenisProvider({ children }: { children: ReactNode }) {
     };
   }, [reducedMotion]);
 
-  return <>{children}</>;
+  return (
+    <LenisContext.Provider value={lenis}>{children}</LenisContext.Provider>
+  );
 }

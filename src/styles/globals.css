@@ -248,6 +248,22 @@
       transform: scale(0.82);
     }
   }
+
+  /* The breathing halo under the big gold action button. Opacity and transform
+     only, so it is composited rather than repainted. */
+  --animate-glow-pulse: glow-pulse 3.4s ease-in-out infinite;
+
+  @keyframes glow-pulse {
+    0%,
+    100% {
+      opacity: 0.4;
+      transform: scale(0.94);
+    }
+    50% {
+      opacity: 0.85;
+      transform: scale(1.06);
+    }
+  }
 }
 
 /* ==========================================================================

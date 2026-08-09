@@ -3,8 +3,8 @@ import { Sprout, Timer, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import { DailyWorld } from "@/components/layout/daily-world";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { SECTION_LINKS } from "@/components/layout/nav-links";
+import { Hero } from "@/components/sections/hero";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { resolveLocale } from "@/i18n/locale";
@@ -72,7 +72,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       // Focusable so the header's skip link actually moves focus, and offset
       // so the sticky bar never covers the landing spot.
       tabIndex={-1}
-      className="flex flex-1 scroll-mt-24 items-center justify-center px-5 py-16 outline-none sm:py-20"
+      className="flex flex-1 scroll-mt-24 flex-col outline-none"
     >
       <script
         type="application/ld+json"
@@ -81,50 +81,44 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <Container size="sm" className="flex flex-col items-center gap-10">
-        <Badge variant="gold" className="uppercase tracking-[0.18em]">
-          <span
-            aria-hidden="true"
-            className="size-1.5 rounded-full bg-seed-gold motion-safe:animate-pulse-dot"
-          />
-          {t("status")}
-        </Badge>
+      <Hero />
 
-        <SectionHeading
-          as="h1"
-          size="hero"
-          align="center"
-          title={brand("name")}
-          description={t("tagline")}
-        />
-
-        <DailyWorld />
-
-        <div className="flex flex-col items-center gap-3">
-          <Button variant="play" size="xl">
-            {t("play")}
-          </Button>
-          <p className="text-seed-muted text-xs">{t("playNote")}</p>
-        </div>
-
-        <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
-          <Perk
-            icon={Timer}
-            label={t("perks.runLabel")}
-            value={t("perks.runValue")}
+      <section
+        id={SECTION_LINKS[0].hash}
+        // The hero's second call to action sends focus here, so the section
+        // has to be able to receive it.
+        tabIndex={-1}
+        className="scroll-mt-24 py-20 outline-none sm:py-24"
+      >
+        <Container size="sm" className="flex flex-col items-center gap-10">
+          <SectionHeading
+            align="center"
+            eyebrow={t("status")}
+            title={brand("name")}
+            description={t("tagline")}
           />
-          <Perk
-            icon={Sprout}
-            label={t("perks.seedLabel")}
-            value={t("perks.seedValue")}
-          />
-          <Perk
-            icon={Zap}
-            label={t("perks.asyncLabel")}
-            value={t("perks.asyncValue")}
-          />
-        </ul>
-      </Container>
+
+          <DailyWorld />
+
+          <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
+            <Perk
+              icon={Timer}
+              label={t("perks.runLabel")}
+              value={t("perks.runValue")}
+            />
+            <Perk
+              icon={Sprout}
+              label={t("perks.seedLabel")}
+              value={t("perks.seedValue")}
+            />
+            <Perk
+              icon={Zap}
+              label={t("perks.asyncLabel")}
+              value={t("perks.asyncValue")}
+            />
+          </ul>
+        </Container>
+      </section>
     </main>
   );
 }

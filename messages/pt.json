@@ -45,11 +45,20 @@
       "terms": "Termos"
     }
   },
+  "Hero": {
+    "badge": "Um mundo novo. Todos os dias.",
+    "title": {
+      "lead": "Conquista o mundo de hoje.",
+      "accent": "Antes que ele colapse."
+    },
+    "subtitle": "Estratégia de território, um mapa procedural novo por dia, partilha o teu resultado.",
+    "play": "Jogar",
+    "secondary": "Ver como funciona",
+    "note": "Grátis. Sem download, sem conta, um toque."
+  },
   "Home": {
     "status": "Era 0",
     "tagline": "Um mundo. Uma seed. Toda a gente joga o mesmo mapa, e ao anoitecer ele desaparece.",
-    "play": "Jogar o mundo de hoje",
-    "playNote": "Grátis. Sem download, sem conta, um toque.",
     "hud": {
       "label": "Mundo de hoje",
       "seed": "Seed",

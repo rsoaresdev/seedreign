@@ -45,11 +45,20 @@
       "terms": "Terms"
     }
   },
+  "Hero": {
+    "badge": "A new world. Every day.",
+    "title": {
+      "lead": "Conquer today's world.",
+      "accent": "Before it collapses."
+    },
+    "subtitle": "Territory strategy. A fresh procedural world every day. Share your result.",
+    "play": "Play",
+    "secondary": "See how it works",
+    "note": "Free. No download, no account, one tap."
+  },
   "Home": {
     "status": "Era 0",
     "tagline": "One world. One seed. Everybody plays the same map, and by nightfall it is gone.",
-    "play": "Play today's world",
-    "playNote": "Free. No download, no account, one tap.",
     "hud": {
       "label": "Today's world",
       "seed": "Seed",

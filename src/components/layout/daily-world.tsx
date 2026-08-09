@@ -4,15 +4,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { Card } from "@/components/ui/card";
-
-/** The seed everybody plays today, derived from the calendar date. */
-function seedFor(date: Date): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-
-  return `${year}${month}${day}`;
-}
+import { dailySeed } from "@/lib/daily";
 
 /** Milliseconds until the world collapses, which is the next local midnight. */
 function msUntilCollapse(from: Date): number {
@@ -50,7 +42,7 @@ export function DailyWorld() {
     return () => window.clearInterval(id);
   }, []);
 
-  const seed = now ? `#${seedFor(now)}` : null;
+  const seed = now ? `#${dailySeed(now)}` : null;
   const countdown = now ? formatCountdown(msUntilCollapse(now)) : null;
 
   return (
