@@ -56,22 +56,27 @@
     "secondary": "See how it works",
     "note": "Free. No download, no account, one tap."
   },
-  "Home": {
-    "status": "Era 0",
-    "tagline": "One world. One seed. Everybody plays the same map, and by nightfall it is gone.",
-    "hud": {
-      "label": "Today's world",
-      "seed": "Seed",
-      "collapse": "Collapse in",
-      "loading": "Reading the seed"
-    },
-    "perks": {
-      "runLabel": "One run",
-      "runValue": "7 to 25 min",
-      "seedLabel": "Same seed",
-      "seedValue": "For every player",
-      "asyncLabel": "No lobbies",
-      "asyncValue": "Drop in any time"
+  "WhatIsIt": {
+    "eyebrow": "The game",
+    "title": "Four things make it Seedreign",
+    "description": "One world. One seed. Everybody plays the same map, and by nightfall it is gone.",
+    "pillars": {
+      "daily": {
+        "title": "A new world at dawn",
+        "body": "One seed sows the map, and it is the same map for every player on the planet. Nobody draws an easier world than you did."
+      },
+      "skill": {
+        "title": "Taken on skill",
+        "body": "Territory, timing, your commander's abilities and whatever you dare grab off the map. Cards are one layer of seven, never the whole game."
+      },
+      "living": {
+        "title": "The map fights back",
+        "body": "Rivers flood, faults tear the land open, vaults crack. Then the Collapse eats the edges and forces the last fight."
+      },
+      "share": {
+        "title": "Then you post the grid",
+        "body": "Every run ends in a spoiler free grid of your world. Drop it in the group chat and let everyone compare the same day."
+      }
     }
   },
   "NotFound": {

@@ -249,6 +249,28 @@
     }
   }
 
+  /*
+    Cells landing one after another, which is how the pillar glyphs are drawn.
+
+    The stagger is an `animation-delay` per cell, so `backwards` is what holds
+    a cell in its empty state until its turn comes. Without the animation, that
+    is under prefers-reduced-motion, every cell simply sits filled in.
+  */
+  --animate-cell-wave: cell-wave 3.2s ease-in-out infinite backwards;
+
+  @keyframes cell-wave {
+    0%,
+    100% {
+      opacity: 0.14;
+      transform: scale(0.82);
+    }
+    12%,
+    80% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   /* The breathing halo under the big gold action button. Opacity and transform
      only, so it is composited rather than repainted. */
   --animate-glow-pulse: glow-pulse 3.4s ease-in-out infinite;

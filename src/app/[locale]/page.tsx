@@ -1,43 +1,15 @@
-import type { LucideIcon } from "lucide-react";
-import { Sprout, Timer, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { DailyWorld } from "@/components/layout/daily-world";
-import { SECTION_LINKS } from "@/components/layout/nav-links";
 import { Hero } from "@/components/sections/hero";
-import { Container } from "@/components/ui/container";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { WhatIsIt } from "@/components/sections/what-is-it";
 import { resolveLocale } from "@/i18n/locale";
 import { localePath } from "@/i18n/routing";
 import { absoluteUrl, site } from "@/lib/site";
 
-function Perk({
-  icon: Icon,
-  label,
-  value,
-}: {
-  icon: LucideIcon;
-  label: string;
-  value: string;
-}) {
-  return (
-    <li className="flex items-center gap-3 rounded-xl border border-seed-line bg-seed-panel/60 px-4 py-3 text-left">
-      <Icon aria-hidden="true" className="size-4 shrink-0 text-seed-teal" />
-      <div className="min-w-0">
-        <div className="text-[0.625rem] text-seed-muted uppercase tracking-[0.18em]">
-          {label}
-        </div>
-        <div className="truncate font-medium text-sm">{value}</div>
-      </div>
-    </li>
-  );
-}
-
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const locale = await resolveLocale(params);
 
-  const [t, brand, meta] = await Promise.all([
-    getTranslations("Home"),
+  const [brand, meta] = await Promise.all([
     getTranslations("Brand"),
     getTranslations("Metadata"),
   ]);
@@ -82,43 +54,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       />
 
       <Hero />
-
-      <section
-        id={SECTION_LINKS[0].hash}
-        // The hero's second call to action sends focus here, so the section
-        // has to be able to receive it.
-        tabIndex={-1}
-        className="scroll-mt-24 py-20 outline-none sm:py-24"
-      >
-        <Container size="sm" className="flex flex-col items-center gap-10">
-          <SectionHeading
-            align="center"
-            eyebrow={t("status")}
-            title={brand("name")}
-            description={t("tagline")}
-          />
-
-          <DailyWorld />
-
-          <ul className="grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
-            <Perk
-              icon={Timer}
-              label={t("perks.runLabel")}
-              value={t("perks.runValue")}
-            />
-            <Perk
-              icon={Sprout}
-              label={t("perks.seedLabel")}
-              value={t("perks.seedValue")}
-            />
-            <Perk
-              icon={Zap}
-              label={t("perks.asyncLabel")}
-              value={t("perks.asyncValue")}
-            />
-          </ul>
-        </Container>
-      </section>
+      <WhatIsIt />
     </main>
   );
 }

@@ -28,8 +28,8 @@ export default async function OpengraphImage({
   params: Promise<{ locale: string }>;
 }) {
   const locale = await resolveLocale(params);
-  const [t, brand, sora] = await Promise.all([
-    getTranslations({ locale, namespace: "Home" }),
+  const [pitch, brand, sora] = await Promise.all([
+    getTranslations({ locale, namespace: "WhatIsIt" }),
     getTranslations({ locale, namespace: "Brand" }),
     displayFont(),
   ]);
@@ -62,28 +62,6 @@ export default async function OpengraphImage({
 
       <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 18,
-          color: "#f6b73c",
-          fontSize: 27,
-          letterSpacing: 7,
-          textTransform: "uppercase",
-        }}
-      >
-        <div
-          style={{
-            width: 14,
-            height: 14,
-            borderRadius: 999,
-            background: "#43c7bd",
-          }}
-        />
-        {t("status")}
-      </div>
-
-      <div
-        style={{
           marginTop: 26,
           fontSize: 168,
           letterSpacing: -6,
@@ -102,7 +80,7 @@ export default async function OpengraphImage({
           color: "#9db0c7",
         }}
       >
-        {t("tagline")}
+        {pitch("description")}
       </div>
 
       {/* Gold underline, echoing the play button glow. */}

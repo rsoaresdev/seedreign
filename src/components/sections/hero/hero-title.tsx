@@ -4,12 +4,12 @@ import { motion, type Variants } from "motion/react";
 import { Fragment } from "react";
 
 import {
-  EASE_OUT,
   REVEAL_DELAY,
   WORD_DURATION,
   WORD_STAGGER,
 } from "@/components/sections/hero/motion";
 import { titleVariants } from "@/components/ui/section-heading";
+import { EASE_OUT } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const wordVariants: Variants = {

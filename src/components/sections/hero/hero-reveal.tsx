@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
-import { EASE_OUT, REVEAL_DURATION } from "@/components/sections/hero/motion";
+import { EASE_OUT, REVEAL_DURATION } from "@/lib/motion";
 
 /**
  * Fades a block of the hero up into place on load. Everything above the fold

@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from "react";
 
 import { createHeroWorld } from "@/components/sections/hero/hero-world";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
-import { dailySeed } from "@/lib/daily";
 
 /** One simulation step. Slow on purpose: a map should read as a map. */
 const TICK_MS = 110;
@@ -27,6 +26,17 @@ const MAP_TRAVEL = 16;
 const GLOW_TRAVEL = -30;
 
 const SPRING = { stiffness: 55, damping: 18, mass: 0.7 };
+
+/**
+ * Where the backdrop starts. Rolled per visit rather than taken from the
+ * calendar: this world is scenery, not the one being played today, and a
+ * reader who reloads should get a coastline they have not seen before.
+ *
+ * A resize keeps the seed it was given, so only the grid is rebuilt.
+ */
+function openingSeed(): number {
+  return (Math.random() * 0x7fff_ffff) | 0;
+}
 
 /**
  * The world behind the hero: a canvas map being taken, collapsing and being
@@ -60,7 +70,7 @@ export function HeroBackdrop() {
 
     if (!canvas || !known) return;
 
-    const world = createHeroWorld(canvas, dailySeed(new Date()));
+    const world = createHeroWorld(canvas, openingSeed());
 
     let frame = 0;
     let previous = 0;
@@ -164,7 +174,13 @@ export function HeroBackdrop() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+      /*
+        The top and bottom of the backdrop are faded with a MASK, never with a
+        slab of background colour. An opaque fade would also cover the page's
+        own glow inside the hero while the transparent header above still shows
+        it, and that difference reads as a hard seam right under the bar.
+      */
+      className="mask-[linear-gradient(to_bottom,transparent,black_20%,black_78%,transparent)] pointer-events-none absolute inset-0 -z-10 overflow-hidden"
     >
       {/* Oversized so the parallax never drags an empty edge into view. */}
       <motion.div
@@ -175,7 +191,7 @@ export function HeroBackdrop() {
             background rather than over the map. */}
         <canvas
           ref={canvasRef}
-          className="size-full mask-[radial-gradient(64%_60%_at_50%_46%,transparent_16%,black_74%)]"
+          className="mask-[radial-gradient(64%_60%_at_50%_46%,transparent_16%,black_74%)] size-full"
         />
       </motion.div>
 
@@ -183,11 +199,6 @@ export function HeroBackdrop() {
         style={{ x: glowX, y: glowY }}
         className="absolute -inset-24 bg-[radial-gradient(36rem_26rem_at_18%_82%,var(--seed-glow-gold),transparent_66%),radial-gradient(32rem_24rem_at_84%_74%,var(--seed-violet-tint),transparent_66%)] will-change-transform"
       />
-
-      {/* Hands the section off to the header and to the page below instead of
-          ending on the two hard coastlines the falloff leaves behind. */}
-      <div className="absolute inset-x-0 top-0 h-28 bg-[linear-gradient(to_bottom,var(--seed-bg),transparent)]" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(to_top,var(--seed-bg),transparent)]" />
     </div>
   );
 }
