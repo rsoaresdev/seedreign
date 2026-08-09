@@ -51,6 +51,17 @@
   --seed-danger-tint: rgb(255 107 107 / 0.1);
   --seed-danger-edge: rgb(255 107 107 / 0.3);
 
+  /*
+    Translucent chrome for surfaces that sit ON TOP of scrolling content: the
+    sticky header, the mobile drawer and its scrim. Literal alpha for the same
+    reason as the tints above, otherwise the fallback turns the glass into an
+    opaque slab. Keep in sync with --seed-bg, --seed-panel-raised and the
+    darkest end of the palette.
+  */
+  --seed-glass: rgb(10 14 22 / 0.72);
+  --seed-glass-raised: rgb(24 34 52 / 0.94);
+  --seed-scrim: rgb(4 6 11 / 0.7);
+
   /* Ambience. Same reason as above: literal alpha, or the fallback paints
      opaque gold and teal blobs across the whole page. */
   --seed-glow-gold: rgb(246 183 60 / 0.13);
@@ -150,6 +161,11 @@
   --color-seed-success-edge: var(--seed-success-edge);
   --color-seed-danger-tint: var(--seed-danger-tint);
   --color-seed-danger-edge: var(--seed-danger-edge);
+
+  /* Translucent chrome. Pair these with `backdrop-blur-*`. */
+  --color-seed-glass: var(--seed-glass);
+  --color-seed-glass-raised: var(--seed-glass-raised);
+  --color-seed-scrim: var(--seed-scrim);
 
   /* Semantic scale */
   --color-background: var(--background);

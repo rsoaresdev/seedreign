@@ -67,7 +67,13 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   };
 
   return (
-    <main className="flex flex-1 items-center justify-center px-5 pt-4 pb-20 sm:pb-28">
+    <main
+      id="main-content"
+      // Focusable so the header's skip link actually moves focus, and offset
+      // so the sticky bar never covers the landing spot.
+      tabIndex={-1}
+      className="flex flex-1 scroll-mt-24 items-center justify-center px-5 py-16 outline-none sm:py-20"
+    >
       <script
         type="application/ld+json"
         // Serialised from a literal object above, so there is no user input.

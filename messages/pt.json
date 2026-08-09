@@ -9,6 +9,42 @@
     "description": "Um jogo .io de estratégia gratuito. Um mundo novo a cada amanhecer, a mesma seed para toda a gente, desfeito ao anoitecer. Joga no browser em 7 a 25 minutos.",
     "keywords": "jogo io, jogo de estratégia, conquista de território, jogo diário, jogo de browser, gratuito, roguelike, multijogador"
   },
+  "Nav": {
+    "label": "Principal",
+    "skipToContent": "Saltar para o conteúdo",
+    "menu": "Menu",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "play": "Jogar",
+    "login": "Entrar",
+    "links": {
+      "game": "O Jogo",
+      "howToPlay": "Como Jogar",
+      "modes": "Modos",
+      "faq": "FAQ"
+    }
+  },
+  "Footer": {
+    "tagline": "Um mundo por dia, a mesma seed para todos os jogadores, desfeito ao anoitecer.",
+    "discord": "Entrar no Discord",
+    "play": "Jogar o mundo de hoje",
+    "login": "Entrar",
+    "columns": {
+      "game": "Jogo",
+      "play": "Jogar"
+    },
+    "social": {
+      "label": "Seedreign noutros sítios",
+      "discord": "Seedreign no Discord",
+      "x": "Seedreign no X",
+      "youtube": "Seedreign no YouTube"
+    },
+    "legal": {
+      "copyright": "© {year} Seedreign",
+      "privacy": "Privacidade",
+      "terms": "Termos"
+    }
+  },
   "Home": {
     "status": "Era 0",
     "tagline": "Um mundo. Uma seed. Toda a gente joga o mesmo mapa, e ao anoitecer ele desaparece.",

@@ -9,6 +9,42 @@
     "description": "A free .io strategy game. One new world every dawn, the same seed for every player, gone by nightfall. Runs in your browser in 7 to 25 minutes.",
     "keywords": "io game, strategy game, territory conquest, daily game, browser game, free to play, roguelike, multiplayer"
   },
+  "Nav": {
+    "label": "Main",
+    "skipToContent": "Skip to content",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "play": "Play",
+    "login": "Log in",
+    "links": {
+      "game": "The Game",
+      "howToPlay": "How to Play",
+      "modes": "Modes",
+      "faq": "FAQ"
+    }
+  },
+  "Footer": {
+    "tagline": "One world a day, the same seed for every player, gone by nightfall.",
+    "discord": "Join the Discord",
+    "play": "Play today's world",
+    "login": "Log in",
+    "columns": {
+      "game": "Game",
+      "play": "Play"
+    },
+    "social": {
+      "label": "Seedreign elsewhere",
+      "discord": "Seedreign on Discord",
+      "x": "Seedreign on X",
+      "youtube": "Seedreign on YouTube"
+    },
+    "legal": {
+      "copyright": "© {year} Seedreign",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  },
   "Home": {
     "status": "Era 0",
     "tagline": "One world. One seed. Everybody plays the same map, and by nightfall it is gone.",

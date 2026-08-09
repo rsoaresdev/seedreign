@@ -13,6 +13,12 @@ export const site = {
     en: "en_US",
     pt: "pt_PT",
   },
+  /** Where the community lives. Absolute URLs, they leave the site. */
+  social: {
+    discord: "https://discord.gg/seedreign",
+    x: "https://x.com/seedreign",
+    youtube: "https://www.youtube.com/@seedreign",
+  },
 } as const;
 
 /** Absolute URL for a site relative path. */

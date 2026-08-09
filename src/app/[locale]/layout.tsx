@@ -3,9 +3,10 @@ import { Inter, Sora } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+import { Footer } from "@/components/layout/footer";
 import { LenisProvider } from "@/components/layout/lenis-provider";
 import { MotionProvider } from "@/components/layout/motion-provider";
-import { SiteHeader } from "@/components/layout/site-header";
+import { Navbar } from "@/components/layout/navbar";
 import { resolveLocale } from "@/i18n/locale";
 import { localePath, routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
@@ -129,8 +130,9 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <MotionProvider>
             <LenisProvider>
-              <SiteHeader />
+              <Navbar />
               {children}
+              <Footer />
             </LenisProvider>
           </MotionProvider>
         </NextIntlClientProvider>

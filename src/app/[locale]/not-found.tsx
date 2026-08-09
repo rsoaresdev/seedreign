@@ -9,7 +9,11 @@ export default async function NotFound() {
   const t = await getTranslations("NotFound");
 
   return (
-    <main className="flex flex-1 items-center justify-center px-5 py-20">
+    <main
+      id="main-content"
+      tabIndex={-1}
+      className="flex flex-1 scroll-mt-24 items-center justify-center px-5 py-20 outline-none"
+    >
       <Container size="sm" className="flex flex-col items-center gap-8">
         <div
           aria-hidden="true"
