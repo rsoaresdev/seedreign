@@ -1,0 +1,41 @@
+{
+  "Brand": {
+    "name": "Seedreign"
+  },
+  "Metadata": {
+    "title": "Seedreign",
+    "titleDefault": "Seedreign · Conquista o mundo antes que ele colapse",
+    "titleTemplate": "{page} · Seedreign",
+    "description": "Um jogo .io de estratégia gratuito. Um mundo novo a cada amanhecer, a mesma seed para toda a gente, desfeito ao anoitecer. Joga no browser em 7 a 25 minutos.",
+    "keywords": "jogo io, jogo de estratégia, conquista de território, jogo diário, jogo de browser, gratuito, roguelike, multijogador"
+  },
+  "Home": {
+    "status": "Era 0",
+    "tagline": "Um mundo. Uma seed. Toda a gente joga o mesmo mapa, e ao anoitecer ele desaparece.",
+    "play": "Jogar o mundo de hoje",
+    "playNote": "Grátis. Sem download, sem conta, um toque.",
+    "hud": {
+      "label": "Mundo de hoje",
+      "seed": "Seed",
+      "collapse": "Colapso em",
+      "loading": "A ler a seed"
+    },
+    "perks": {
+      "runLabel": "Uma partida",
+      "runValue": "7 a 25 min",
+      "seedLabel": "Mesma seed",
+      "seedValue": "Para todos os jogadores",
+      "asyncLabel": "Sem lobbies",
+      "asyncValue": "Entra quando quiseres"
+    }
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "Este mundo colapsou",
+    "description": "Não sobrou nada para conquistar neste endereço. Um novo é semeado ao amanhecer.",
+    "cta": "Jogar o mundo de hoje"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma"
+  }
+}

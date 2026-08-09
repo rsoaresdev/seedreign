@@ -1,0 +1,41 @@
+{
+  "Brand": {
+    "name": "Seedreign"
+  },
+  "Metadata": {
+    "title": "Seedreign",
+    "titleDefault": "Seedreign · Take the world before it collapses",
+    "titleTemplate": "{page} · Seedreign",
+    "description": "A free .io strategy game. One new world every dawn, the same seed for every player, gone by nightfall. Runs in your browser in 7 to 25 minutes.",
+    "keywords": "io game, strategy game, territory conquest, daily game, browser game, free to play, roguelike, multiplayer"
+  },
+  "Home": {
+    "status": "Era 0",
+    "tagline": "One world. One seed. Everybody plays the same map, and by nightfall it is gone.",
+    "play": "Play today's world",
+    "playNote": "Free. No download, no account, one tap.",
+    "hud": {
+      "label": "Today's world",
+      "seed": "Seed",
+      "collapse": "Collapse in",
+      "loading": "Reading the seed"
+    },
+    "perks": {
+      "runLabel": "One run",
+      "runValue": "7 to 25 min",
+      "seedLabel": "Same seed",
+      "seedValue": "For every player",
+      "asyncLabel": "No lobbies",
+      "asyncValue": "Drop in any time"
+    }
+  },
+  "NotFound": {
+    "code": "404",
+    "title": "This world collapsed",
+    "description": "Nothing left to conquer at this address. A new one is sown at dawn.",
+    "cta": "Play today's world"
+  },
+  "LocaleSwitcher": {
+    "label": "Language"
+  }
+}

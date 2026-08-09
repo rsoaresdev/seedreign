@@ -1,0 +1,294 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   1. Brand primitives.
+   Raw values live here and NOWHERE else. Everything below refers to these.
+   ========================================================================== */
+:root {
+  /* The app has no light theme, so tell the user agent: scrollbars and form
+     controls render dark instead of defaulting to light. */
+  color-scheme: dark;
+
+  --seed-bg: #0a0e16;
+  --seed-panel: #121a28;
+  --seed-panel-raised: #182234;
+  --seed-line: #1e2a3c;
+  --seed-line-strong: #2c3b52;
+  /* Boundary for interactive controls, clears 3:1 on --seed-bg (WCAG 1.4.11). */
+  --seed-line-bright: #5b6f8c;
+  --seed-text: #e7eef7;
+  --seed-muted: #9db0c7;
+  --seed-gold: #f6b73c;
+  --seed-teal: #43c7bd;
+  --seed-violet: #b48cf0;
+
+  /* Status colours, tuned for legibility on #0a0e16. */
+  --seed-danger: #ff6b6b;
+  --seed-success: #46d39a;
+
+  /*
+    Tints and edges are written out literally instead of being derived with
+    `color-mix()` or Tailwind's `/10` alpha modifier.
+
+    Both compile to `color-mix()`, and Lightning CSS emits a fallback for
+    engines that lack it in which the alpha is DROPPED: a 10% gold wash becomes
+    solid gold, and gold on gold text disappears. Aged Android WebViews are
+    exactly that audience. Literal alpha degrades safely.
+    Keep these in sync with the hex values above.
+  */
+  --seed-gold-tint: rgb(246 183 60 / 0.1);
+  --seed-gold-edge: rgb(246 183 60 / 0.3);
+  --seed-teal-tint: rgb(67 199 189 / 0.1);
+  --seed-teal-edge: rgb(67 199 189 / 0.3);
+  --seed-violet-tint: rgb(180 140 240 / 0.1);
+  --seed-violet-edge: rgb(180 140 240 / 0.3);
+  --seed-success-tint: rgb(70 211 154 / 0.1);
+  --seed-success-edge: rgb(70 211 154 / 0.3);
+  --seed-danger-tint: rgb(255 107 107 / 0.1);
+  --seed-danger-edge: rgb(255 107 107 / 0.3);
+
+  /* Ambience. Same reason as above: literal alpha, or the fallback paints
+     opaque gold and teal blobs across the whole page. */
+  --seed-glow-gold: rgb(246 183 60 / 0.13);
+  --seed-glow-teal: rgb(67 199 189 / 0.12);
+  /* Same colour as --seed-text, kept literal so the grid never inherits a
+     colour-mix fallback. Update both together. */
+  --seed-grid: rgb(231 238 247 / 0.035);
+  --seed-grid-size: 72px;
+
+  /* Type stacks. Real custom properties so `@theme inline` can alias them. */
+  --seed-font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --seed-font-display: var(--font-sora), var(--seed-font-body);
+  --seed-font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+}
+
+/* ==========================================================================
+   2. Semantic tokens.
+   The game is dark only, so there is a single theme and no light block to
+   keep in sync.
+   ========================================================================== */
+:root {
+  --background: var(--seed-bg);
+  --foreground: var(--seed-text);
+
+  --card: var(--seed-panel);
+  --card-foreground: var(--seed-text);
+  --popover: var(--seed-panel-raised);
+  --popover-foreground: var(--seed-text);
+
+  /* Gold is the highlight and the call to action. Teal is secondary. Violet
+     stays reserved for lore accents, so it is deliberately NOT wired to a
+     hover surface. */
+  --primary: var(--seed-gold);
+  --primary-foreground: var(--seed-bg);
+  --secondary: var(--seed-teal);
+  --secondary-foreground: var(--seed-bg);
+
+  /* Neutral surfaces for muted text and hover states. */
+  --muted: var(--seed-panel);
+  --muted-foreground: var(--seed-muted);
+  --accent: var(--seed-panel-raised);
+  --accent-foreground: var(--seed-text);
+
+  --destructive: var(--seed-danger);
+  --success: var(--seed-success);
+  --warning: var(--seed-gold);
+
+  --border: var(--seed-line);
+  --input: var(--seed-line-strong);
+  --ring: var(--seed-teal);
+
+  --radius: 0.75rem;
+
+  --chart-1: var(--seed-gold);
+  --chart-2: var(--seed-teal);
+  --chart-3: var(--seed-violet);
+  --chart-4: var(--seed-muted);
+  --chart-5: var(--seed-line-strong);
+
+  --sidebar: var(--seed-panel);
+  --sidebar-foreground: var(--seed-text);
+  --sidebar-primary: var(--seed-gold);
+  --sidebar-primary-foreground: var(--seed-bg);
+  --sidebar-accent: var(--seed-panel-raised);
+  --sidebar-accent-foreground: var(--seed-text);
+  --sidebar-border: var(--seed-line);
+  --sidebar-ring: var(--seed-teal);
+}
+
+/* ==========================================================================
+   3. Tailwind theme.
+   `inline` is required: these all resolve to `var(...)`, and only `inline`
+   substitutes the reference into the utility so it resolves at the element.
+   ========================================================================== */
+@theme inline {
+  /* Brand scale: bg-seed-gold, text-seed-muted, border-seed-line and so on. */
+  --color-seed-bg: var(--seed-bg);
+  --color-seed-panel: var(--seed-panel);
+  --color-seed-panel-raised: var(--seed-panel-raised);
+  --color-seed-line: var(--seed-line);
+  --color-seed-line-strong: var(--seed-line-strong);
+  --color-seed-line-bright: var(--seed-line-bright);
+  --color-seed-text: var(--seed-text);
+  --color-seed-muted: var(--seed-muted);
+  --color-seed-gold: var(--seed-gold);
+  --color-seed-teal: var(--seed-teal);
+  --color-seed-violet: var(--seed-violet);
+
+  /* Pre-mixed tints. Use these instead of `bg-seed-gold/10`. */
+  --color-seed-gold-tint: var(--seed-gold-tint);
+  --color-seed-gold-edge: var(--seed-gold-edge);
+  --color-seed-teal-tint: var(--seed-teal-tint);
+  --color-seed-teal-edge: var(--seed-teal-edge);
+  --color-seed-violet-tint: var(--seed-violet-tint);
+  --color-seed-violet-edge: var(--seed-violet-edge);
+  --color-seed-success-tint: var(--seed-success-tint);
+  --color-seed-success-edge: var(--seed-success-edge);
+  --color-seed-danger-tint: var(--seed-danger-tint);
+  --color-seed-danger-edge: var(--seed-danger-edge);
+
+  /* Semantic scale */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Forward compat shims for shadcn's chart and sidebar components. They emit
+     no CSS until something uses them, so they are not live design decisions. */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Type: font-display for titles, font-sans for body. */
+  --font-sans: var(--seed-font-body);
+  --font-display: var(--seed-font-display);
+  --font-heading: var(--seed-font-display);
+  --font-mono: var(--seed-font-mono);
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Shadows: shadow-panel, shadow-glow-gold and so on. */
+  --shadow-panel:
+    inset 0 1px 0 0 rgb(255 255 255 / 0.04), 0 16px 40px -24px rgb(0 0 0 / 0.9);
+  --shadow-raised:
+    inset 0 1px 0 0 rgb(255 255 255 / 0.06), 0 28px 64px -28px rgb(0 0 0 / 0.95);
+  --shadow-glow-gold: 0 14px 44px -14px
+    color-mix(in oklab, var(--seed-gold) 60%, transparent);
+  --shadow-glow-gold-strong: 0 18px 60px -12px
+    color-mix(in oklab, var(--seed-gold) 85%, transparent);
+  --shadow-glow-teal: 0 14px 44px -14px
+    color-mix(in oklab, var(--seed-teal) 55%, transparent);
+  --shadow-glow-violet: 0 14px 44px -14px
+    color-mix(in oklab, var(--seed-violet) 55%, transparent);
+
+  /* A slow pulse for live status dots. */
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(0.82);
+    }
+  }
+}
+
+/* ==========================================================================
+   4. Base layer
+   ========================================================================== */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply bg-background font-sans text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /*
+    Global ambience: a faint grid under two radial glows. Pure CSS on two
+    pseudo-elements, so no extra DOM, no JS and no repaint cost while
+    scrolling. The grid is masked so it fades out down the page.
+  */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  body::before {
+    z-index: -2;
+    background-image:
+      linear-gradient(to right, var(--seed-grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--seed-grid) 1px, transparent 1px);
+    background-size: var(--seed-grid-size) var(--seed-grid-size);
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+  }
+
+  body::after {
+    z-index: -1;
+    background-image:
+      radial-gradient(
+        48rem 32rem at 12% -10%,
+        var(--seed-glow-gold),
+        transparent 70%
+      ),
+      radial-gradient(
+        42rem 30rem at 88% 2%,
+        var(--seed-glow-teal),
+        transparent 70%
+      );
+  }
+}

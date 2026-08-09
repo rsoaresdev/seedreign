@@ -1,0 +1,33 @@
+# Seedreign
+
+> A free territory conquest .io strategy game for browser and phone. One
+> procedurally generated world is sown every dawn, the same seed for every
+> player, and it collapses at nightfall. Play asynchronously in 7 to 25
+> minutes, then share a spoiler free emoji grid of your run.
+
+Seedreign is mobile first, free to play, and monetised only through cosmetics
+and ads. It is never pay to win: the competitive surfaces are skill levelled,
+and the daily draft is dealt by the seed rather than from a player's
+collection.
+
+## How a run works
+
+- One world per day, generated from a single integer seed, identical for
+  everyone.
+- Expand your colour across the map. A slider splits your army between attack
+  and defence, and population grows with the territory you hold.
+- The world reacts every few minutes with events called World Pulses: floods,
+  quakes, raids, vaults opening.
+- Every run ends in the Collapse, a shrinking play area that forces the final
+  confrontation.
+- The daily victory condition rotates: conquest, domination, relic hunt, blitz,
+  last banner, wonders, asymmetric goals.
+
+## Site map
+
+- [Home](https://seedreign.io): the daily world and the play entry point.
+- [Portuguese home](https://seedreign.io/pt): same page in Portuguese.
+
+## Contact
+
+Web: https://seedreign.io
