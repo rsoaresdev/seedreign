@@ -1,7 +1,13 @@
 import { getTranslations } from "next-intl/server";
 
+import { Faq } from "@/components/sections/faq";
+import { FinalCta } from "@/components/sections/final-cta";
 import { Hero } from "@/components/sections/hero";
+import { HowToPlay } from "@/components/sections/how-to-play";
+import { Modes } from "@/components/sections/modes";
+import { Share } from "@/components/sections/share";
 import { WhatIsIt } from "@/components/sections/what-is-it";
+import { World } from "@/components/sections/world";
 import { resolveLocale } from "@/i18n/locale";
 import { localePath } from "@/i18n/routing";
 import { absoluteUrl, site } from "@/lib/site";
@@ -55,6 +61,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
       <Hero />
       <WhatIsIt />
+      <HowToPlay />
+      <World />
+      <Modes />
+      <Share />
+      <Faq />
+      <FinalCta />
     </main>
   );
 }

@@ -79,6 +79,306 @@
       }
     }
   },
+  "HowToPlay": {
+    "eyebrow": "How to play",
+    "title": "Dawn to dusk in five steps",
+    "description": "No download, no lobby, nobody to wait for. You pick your orders, you take ground, and the world spends the rest of the day trying to take it back.",
+    "hud": {
+      "dawn": "Dawn",
+      "dusk": "Dusk"
+    },
+    "steps": {
+      "draft": {
+        "title": "Draft your orders",
+        "meta": "6 offered, keep 3",
+        "body": "The day opens with six order cards, the same six for every player alive. Take three and live with them."
+      },
+      "expand": {
+        "title": "Take ground",
+        "meta": "Attack or hold",
+        "body": "One slider splits your army between the push and the line. Territory feeds population, population feeds the next push, and a river held early is worth twice the troops."
+      },
+      "pulse": {
+        "title": "Ride the World Pulses",
+        "meta": "Every 2 to 4 min",
+        "body": "Rivers burst, faults tear the land open, a vault cracks somewhere far away. The seed fires the same Pulse at the same second for everyone, so the only difference is what you do with it."
+      },
+      "collapse": {
+        "title": "Survive the Collapse",
+        "meta": "The map closes in",
+        "body": "At dusk the world unravels from the edges and the ground you can stand on shrinks. Whoever is still holding something when it stops gets the last fight."
+      },
+      "share": {
+        "title": "Post the grid, climb the league",
+        "meta": "Spoiler free",
+        "body": "Score, ghost comparisons and a spoiler free grid of your world. Drop it in the group chat, then watch the day's percentile land in your weekly league."
+      }
+    }
+  },
+  "World": {
+    "eyebrow": "Today's world",
+    "title": "Put a hand on the map",
+    "description": "One number sowed this world, and it is the same world every time it loads. March your Seeded across it, spend an order, and watch the ground change hands under you.",
+    "board": "Today's map",
+    "help": "Pick any ground and your Seeded marches there, taking every tile on the way. Arm an order first and the same pick spends the order instead. Arrow keys walk the map, Enter commits, Escape puts the card back.",
+    "orders": "Your hand",
+    "aim": "Armed. Pick where it lands.",
+    "reset": "Sow it again",
+    "note": "Same engine, same hexes, the same one seed for everyone. A full day adds rivals on the other side of that border, a World Pulse every few minutes, and the Collapse closing in on a clock.",
+    "terrain": {
+      "abyss": "Deep water",
+      "sea": "Open sea",
+      "shelf": "Shallows",
+      "shore": "Shore",
+      "plain": "Plain",
+      "forest": "Forest",
+      "hill": "Hills",
+      "peak": "Peak",
+      "snow": "Snow line"
+    },
+    "holder": {
+      "you": "yours",
+      "neutral": "open ground",
+      "rival": "held by House {house}"
+    },
+    "structure": {
+      "city": "city",
+      "port": "port",
+      "forge": "relic forge",
+      "wonder": "wonder",
+      "camp": "raider camp",
+      "chest": "chest"
+    },
+    "tile": {
+      "plain": "{terrain}, {holder}",
+      "structure": "{terrain}, {holder}, {structure}",
+      "commander": "{terrain}, {holder}, your Seeded stands here",
+      "both": "{terrain}, {holder}, {structure}, your Seeded stands here"
+    },
+    "report": {
+      "march": "{count, plural, =0 {Your Seeded is already standing there.} one {Marched one tile and took it.} other {Marched # tiles and took every one.}}",
+      "expand": "{count, plural, =0 {No open ground in reach. Aim somewhere emptier.} one {Expand claimed one tile.} other {Expand claimed # tiles.}}",
+      "blitz": "{count, plural, =0 {Nothing to drive at along that line.} one {Blitz drove one tile deep.} other {Blitz drove # tiles deep.}}",
+      "fortify": "{count, plural, =0 {No line of yours to hold over there.} one {Fortify walled one tile of your border.} other {Fortify walled # tiles of your border.}}",
+      "storm": "{count, plural, =0 {The storm rolled over open ground and took nothing.} one {The storm flipped one rival tile.} other {The storm flipped # rival tiles.}}"
+    }
+  },
+  "Game": {
+    "hud": {
+      "world": "World",
+      "condition": "Condition",
+      "decree": "Decree",
+      "dusk": "Dusk in",
+      "minimap": "World at a glance",
+      "conditions": {
+        "conquest": "Conquest",
+        "domination": "Domination",
+        "relicHunt": "Relic Hunt",
+        "blitz": "Blitz",
+        "lastBanner": "Last Banner",
+        "wonders": "Wonders",
+        "secretOrders": "Sealed Orders"
+      },
+      "decrees": {
+        "twinRelics": "Twin Relics",
+        "longNight": "Long Night",
+        "swiftOrders": "Swift Orders",
+        "guardedSpoils": "Guarded Spoils"
+      },
+      "force": {
+        "label": "Army split",
+        "attack": "Attack",
+        "hold": "Hold",
+        "value": "{attack}% attack, {hold}% hold"
+      },
+      "abilities": {
+        "label": "Commander abilities",
+        "charge": "Charge",
+        "bombard": "Bombardment",
+        "wall": "Wall",
+        "fleet": "Redeploy Fleet"
+      },
+      "standings": {
+        "label": "House standings",
+        "title": "Houses",
+        "held": "Held",
+        "you": "You",
+        "houses": {
+          "gold": "Ember",
+          "teal": "Tide",
+          "violet": "Veil",
+          "danger": "Ash"
+        }
+      }
+    },
+    "cards": {
+      "meta": "{rarity}, cost {cost}",
+      "rarity": {
+        "common": "Common",
+        "uncommon": "Uncommon",
+        "rare": "Rare"
+      },
+      "expand": {
+        "name": "Expand",
+        "effect": "Push every front out a ring at once, instead of one at a time."
+      },
+      "blitz": {
+        "name": "Blitz",
+        "effect": "One thin strike, driven deep. The wide push pays for it."
+      },
+      "fortify": {
+        "name": "Fortify",
+        "effect": "Trade the push for a line that holds while you look elsewhere."
+      },
+      "landing": {
+        "name": "Landing",
+        "effect": "Cross open water onto a coast your front line cannot reach."
+      },
+      "sabotage": {
+        "name": "Sabotage",
+        "effect": "Cut a rival's supply where it runs thin, and let their front feel it."
+      },
+      "storm": {
+        "name": "Storm-Caller",
+        "effect": "Call weather over a stretch of map. Nothing moves well under it, you included."
+      },
+      "nuke": {
+        "name": "Nuke",
+        "effect": "Unmake a region. The ground stays wrecked, and everyone saw who did it."
+      }
+    }
+  },
+  "Modes": {
+    "eyebrow": "Modes",
+    "title": "Six ways to take a world",
+    "description": "The daily world is the ritual. Everything around it is where you warm up, climb, and build worlds of your own.",
+    "items": {
+      "daily": {
+        "badge": "Main mode",
+        "title": "Daily Challenge",
+        "body": "One world, one seed, one shot at it. Draft, conquer, beat the day's condition and land on the same board as everybody else. 7 to 25 minutes."
+      },
+      "blitz": {
+        "badge": "3 to 5 min",
+        "title": "Blitz",
+        "body": "A random world and a short fuse. The whole arc, first border to Collapse, in the time it takes to wait for a bus."
+      },
+      "ranked": {
+        "badge": "Era",
+        "title": "Ranked",
+        "body": "Bronze to Legend on a curated pool that rotates every Era. New theme, new cards, soft reset, and rewards that reach past the halfway mark."
+      },
+      "weekly": {
+        "badge": "Weekly",
+        "title": "Weekly Events",
+        "body": "Decrees stack and the difficulty climbs a level at a time. Go as deep as you can hold on, and keep the rewards for every level you clear."
+      },
+      "forge": {
+        "badge": "Custom",
+        "title": "The Forge",
+        "body": "Pick a seed, a size and the Decrees, then hand your friends the code. Same world, same rules, no excuses."
+      },
+      "bots": {
+        "badge": "Offline",
+        "title": "Skirmish",
+        "body": "Three bot difficulties, whatever Decrees you feel like, no clock and no leaderboard. Where the openings get learned."
+      }
+    },
+    "band": {
+      "eyebrow": "The loop",
+      "title": "Worlds die. Your legend does not.",
+      "body": "A world lasts a day. The streak, the league place and the collection you built on it carry into every world after, and none of it is for sale.",
+      "hooks": {
+        "ritual": {
+          "title": "A daily ritual",
+          "body": "One world a day, the same map for the whole planet, gone by nightfall."
+        },
+        "streak": {
+          "title": "Streaks",
+          "body": "Show up at dawn and the count grows. Miss one and it starts again at one."
+        },
+        "leagues": {
+          "title": "Leagues",
+          "body": "Every daily result stacks into a weekly league and a place in the Era."
+        },
+        "collection": {
+          "title": "Collection",
+          "body": "Cards, relics, banners and territory colours the whole map can see."
+        },
+        "fair": {
+          "title": "Never pay to win",
+          "body": "Daily and Ranked deal everyone the same pool. Money buys looks, never power."
+        }
+      }
+    }
+  },
+  "Share": {
+    "eyebrow": "The proof",
+    "title": "Everyone played today's world. Post yours.",
+    "description": "A run ends in a grid nobody can be spoiled by, a place on today's board, and a percentile that follows you all the way into the Era.",
+    "result": {
+      "label": "World {world}",
+      "condition": "Conquest",
+      "territory": "Territory",
+      "time": "Taken in",
+      "percentile": "Top",
+      "copy": "Copy grid",
+      "copied": "Copied",
+      "note": "Colours and shape only. Nobody sees the route you took.",
+      "shareTitle": "Seedreign · World {world}",
+      "shareLine": "Conquest · {territory}% · {time}"
+    },
+    "board": {
+      "eyebrow": "Today's board",
+      "title": "Then you find out where that put you",
+      "body": "One seed for the whole planet means one honest ranking. Every daily percentile stacks into the weekly league, and the league into your place in the Era.",
+      "you": "You",
+      "live": "{count} seeded today"
+    }
+  },
+  "Faq": {
+    "eyebrow": "Questions",
+    "title": "Straight answers",
+    "description": "Everything people ask before their first world, answered without the marketing voice.",
+    "items": {
+      "free": {
+        "question": "Is it free?",
+        "answer": "Yes. The whole game, every mode, every day. Cosmetics and the Era Pass are the only things that cost anything, and neither one wins you a world."
+      },
+      "install": {
+        "question": "Do I need to install anything?",
+        "answer": "No. It runs in the browser tab you already have open. You can add it to your home screen if you want it a tap away, but that is a shortcut, not a download."
+      },
+      "fair": {
+        "question": "Is it pay to win?",
+        "answer": "No, and it is built so it cannot become one. Daily and Ranked deal every player the same pool from the day's seed, never from your collection, and no card has a level or a stat you can buy."
+      },
+      "mobile": {
+        "question": "Does it work on my phone?",
+        "answer": "It was designed for a phone first: portrait, one thumb, and light enough to run on hardware that is a few years old. On a desktop it is the same game with more room."
+      },
+      "length": {
+        "question": "How long does a world take?",
+        "answer": "Between 7 and 25 minutes, and it ends whether you are ready or not. The Collapse closes the map in, so nothing drags."
+      },
+      "account": {
+        "question": "Do I need an account?",
+        "answer": "Not to play. You need one to keep a streak, hold a league place and carry a collection between worlds, and it takes a moment to make."
+      }
+    },
+    "more": "Something we missed?",
+    "discord": "Ask in the Discord"
+  },
+  "FinalCta": {
+    "eyebrow": "Today's world is already sown",
+    "title": "Take it before the Collapse does",
+    "description": "Same map, same seed, same shot at it as everyone else on the board. When the world unravels, whatever you are still holding is the score.",
+    "play": "Play",
+    "note": "Free. No download, no account, one tap.",
+    "hud": {
+      "dusk": "Dusk in"
+    }
+  },
   "NotFound": {
     "code": "404",
     "title": "This world collapsed",
@@ -87,5 +387,285 @@
   },
   "LocaleSwitcher": {
     "label": "Language"
+  },
+  "Play": {
+    "meta": {
+      "title": "Play",
+      "description": "Conquer today's world before it collapses at dusk. One seed for everyone, one legend for you."
+    },
+    "common": {
+      "back": "Back",
+      "play": "Play",
+      "claim": "Claim",
+      "shards": "Shards",
+      "gems": "Gems"
+    },
+    "hub": {
+      "eraBadge": "Era {number}",
+      "daily": {
+        "kicker": "Today's Sowing",
+        "assigned": "Today's world marches under this banner.",
+        "streak": "{count, plural, one {# day streak} other {# day streak}}",
+        "play": "Play",
+        "playedLabel": "Your official run",
+        "topPercent": "Top {percent}% of all Seeded today",
+        "board": "Board",
+        "practice": "Practice",
+        "spent": "Your official run for this world is spent."
+      },
+      "weekly": {
+        "heat": "Heat {level}"
+      },
+      "skirmish": {
+        "size": {
+          "small": "Small world",
+          "large": "Vast world"
+        }
+      },
+      "forge": {
+        "codeLabel": "Forge code",
+        "placeholder": "WORLD CODE",
+        "sow": "Sow"
+      },
+      "armory": "Armory",
+      "league": {
+        "points": "{points} pts",
+        "daysLeft": "{days, plural, one {# day left} other {# days left}}"
+      },
+      "recap": {
+        "title": "The {era} has closed",
+        "body": "You finished at {tier} with {points} points. {gems} Gems join your hoard."
+      },
+      "stats": "{matches} runs · best {best}",
+      "reset": "Erase my legend",
+      "resetConfirm": "Tap again. Everything burns."
+    },
+    "modes": {
+      "daily": {
+        "title": "Daily Challenge"
+      },
+      "blitz": {
+        "title": "Blitz",
+        "blurb": "A small world, a fast clock. In and out."
+      },
+      "weekly": {
+        "title": "Weekly Event",
+        "blurb": "One decree, rising heat, rewards per level."
+      },
+      "skirmish": {
+        "title": "Skirmish",
+        "blurb": "Your rules, your rivals, no stakes."
+      },
+      "forge": {
+        "title": "Forge",
+        "blurb": "Sow a world from a code and pass it on."
+      }
+    },
+    "difficulty": {
+      "0": "Sprout",
+      "1": "Veteran",
+      "2": "Sovereign"
+    },
+    "draft": {
+      "kicker": "The Draft",
+      "title": "Choose your orders",
+      "subtitle": "Six on the table, the same six for everyone. Keep {keep}.",
+      "assigned": "The seed chose your commander today.",
+      "count": "{kept} of {keep} chosen",
+      "confirm": "March"
+    },
+    "match": {
+      "pause": "Pause",
+      "pausedTitle": "The world holds its breath",
+      "resume": "Resume",
+      "abandon": "Abandon the day",
+      "practice": "Practice",
+      "troops": "troops",
+      "held": "{percent}% held",
+      "victory": "The world is yours",
+      "duskFalls": "Dusk falls",
+      "collapseBegins": "The Collapse begins",
+      "eliminated": "House {house} has fallen",
+      "forgeLost": "A rival claimed the Forge",
+      "wonderTaken": "House {house} holds the Wonder",
+      "cannotReach": "No path there. Take a port, or come by Landing.",
+      "relics": {
+        "kicker": "The Forge burns",
+        "title": "Choose a relic"
+      },
+      "mapLabel": "World map. Arrow keys aim, PageUp and PageDown take the diagonals, Enter attacks."
+    },
+    "results": {
+      "kickerWorld": "World {world}",
+      "titleWin": "The world is yours",
+      "titlePlace": "You stood {place, selectordinal, one {#st} two {#nd} few {#rd} other {#th}}",
+      "score": "Score",
+      "rankLine": "Rank {rank} of {total} · top {percent}%",
+      "spoils": "Spoils",
+      "reward": {
+        "base": "Taking the field",
+        "score": "Score",
+        "placement": "Placement",
+        "firstOfDay": "First Sowing of the day",
+        "streak": "Streak",
+        "heat": "Weekly heat cleared",
+        "total": "Shards earned"
+      },
+      "eraPoints": "+{points} Era points",
+      "gridTitle": "The shape of your day",
+      "gridNote": "Colours and shape only. Nobody sees the route you took.",
+      "copy": "Copy",
+      "copied": "Copied",
+      "shareTitle": "Seedreign · World {world}",
+      "shareTitleCasual": "Seedreign · {mode}",
+      "shareLine": "{condition} · {territory}% · {score}",
+      "backHub": "Back to the hub",
+      "board": "Board",
+      "again": "Again",
+      "practice": "Practice"
+    },
+    "armory": {
+      "title": "The Armory",
+      "subtitle": "Identity, never power. A skin changes your portrait, your banner and the pattern the whole map sees on your ground.",
+      "passive": "Passive",
+      "equip": "Equip",
+      "equipped": "Equipped",
+      "tierFree": "Yours",
+      "tierGems": "Era prize",
+      "gemsNote": "Gems are forged when an Era closes. The higher you stand, the richer the vein."
+    },
+    "boards": {
+      "title": "The Boards",
+      "tabDaily": "World {world}",
+      "tabEra": "Era ladder",
+      "seededToday": "{count} seeded today",
+      "you": "You",
+      "notPlayed": "Take today's world and your name joins this board.",
+      "eraLine": "{points} points · {days, plural, one {# day} other {# days}} until the Era collapses",
+      "eraNote": "When the Era collapses, Gems are paid out by the tier you stand in."
+    },
+    "commanders": {
+      "warden": {
+        "name": "Auren",
+        "title": "The Dawnwarden",
+        "abilityName": "Bulwark",
+        "ability": "Raise instant ramparts on your ground around the aim.",
+        "passive": "Your walls stand longer and cost rivals dearly to break."
+      },
+      "reaver": {
+        "name": "Kessa",
+        "title": "The Ashreaver",
+        "abilityName": "Warpath",
+        "ability": "For a breath, your fronts drive faster and push harder.",
+        "passive": "Your army grows quicker while a front of yours is burning."
+      },
+      "tidecaller": {
+        "name": "Maru",
+        "title": "The Tidecaller",
+        "abilityName": "Riptide",
+        "ability": "Surface on any coast and claim a beachhead from the sea.",
+        "passive": "The sea is always open to you, and landings cost less."
+      }
+    },
+    "skins": {
+      "warden-dawn": "Dawn Vanguard",
+      "warden-gilded": "Gilded Aegis",
+      "warden-verdant": "Verdant Rite",
+      "warden-solar": "Solar Sovereign",
+      "reaver-ashmarch": "Ashmarch",
+      "reaver-emberwake": "Emberwake",
+      "reaver-thornveil": "Thornveil",
+      "reaver-crimson": "Crimson Rite",
+      "tide-brine": "Brinewalker",
+      "tide-pearl": "Pearl Current",
+      "tide-undertow": "Undertow",
+      "tide-aurora": "Aurora Tide"
+    },
+    "relics": {
+      "emberHeart": {
+        "name": "Ember Heart",
+        "desc": "Your army grows 18% faster, but you can drive only one front at a time."
+      },
+      "bulwarkSigil": {
+        "name": "Bulwark Sigil",
+        "desc": "Your walls never crumble on their own, and Fortify reaches four tiles further."
+      },
+      "tideCharm": {
+        "name": "Tide Charm",
+        "desc": "The sea opens to you. Far shores cost little more than home ground."
+      },
+      "huntersMark": {
+        "name": "Hunter's Mark",
+        "desc": "Every chest on the map yields an extra spoil to you."
+      },
+      "warBanner": {
+        "name": "War Banner",
+        "desc": "Your fronts take one extra tile per push, but every capture costs a little more."
+      },
+      "stillRoot": {
+        "name": "Stillroot",
+        "desc": "The Collapse spares the ground around your capital until the very end."
+      }
+    },
+    "medals": {
+      "unbroken": {
+        "name": "Unbroken",
+        "desc": "Never lost a tile to a rival."
+      },
+      "avalanche": {
+        "name": "Avalanche",
+        "desc": "Took ninety tiles in one day."
+      },
+      "warlord": {
+        "name": "Warlord",
+        "desc": "Removed two houses from the map."
+      },
+      "seeker": {
+        "name": "Seeker",
+        "desc": "Hoarded the world's chests and relics."
+      },
+      "survivor": {
+        "name": "Survivor",
+        "desc": "Still standing when dusk fell."
+      }
+    },
+    "pulses": {
+      "flood": {
+        "title": "The Flood rises"
+      },
+      "vault": {
+        "title": "A Vault cracks open"
+      },
+      "bounty": {
+        "title": "Bounty on the crown"
+      },
+      "surge": {
+        "title": "The Surge"
+      }
+    },
+    "tiers": {
+      "bronze": "Bronze",
+      "silver": "Silver",
+      "gold": "Gold",
+      "platinum": "Platinum",
+      "diamond": "Diamond",
+      "legend": "Legend"
+    },
+    "eras": {
+      "names": {
+        "frost": "Era of Frost",
+        "thaw": "Era of the Thaw",
+        "bloom": "Era of Bloom",
+        "storm": "Era of Storms",
+        "ember": "Era of Embers",
+        "zenith": "Era of the Zenith",
+        "harvest": "Era of the Harvest",
+        "dusk": "Era of Dusk",
+        "mist": "Era of Mists",
+        "hollow": "Era of the Hollow",
+        "long-night": "Era of the Long Night",
+        "rebirth": "Era of Rebirth"
+      }
+    }
   }
 }

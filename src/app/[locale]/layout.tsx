@@ -3,10 +3,7 @@ import { Inter, Sora } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
-import { Footer } from "@/components/layout/footer";
-import { LenisProvider } from "@/components/layout/lenis-provider";
 import { MotionProvider } from "@/components/layout/motion-provider";
-import { Navbar } from "@/components/layout/navbar";
 import { resolveLocale } from "@/i18n/locale";
 import { localePath, routing } from "@/i18n/routing";
 import { site } from "@/lib/site";
@@ -128,13 +125,7 @@ export default async function LocaleLayout({
         {/* Rendered from a Server Component, so locale and messages are filled
             in automatically and must not be passed manually. */}
         <NextIntlClientProvider>
-          <MotionProvider>
-            <LenisProvider>
-              <Navbar />
-              {children}
-              <Footer />
-            </LenisProvider>
-          </MotionProvider>
+          <MotionProvider>{children}</MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

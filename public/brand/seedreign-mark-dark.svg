@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="256" height="256" role="img" aria-label="Seedreign">
+  <defs>
+    <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffda88"/>
+      <stop offset="1" stop-color="#f4ae33"/>
+    </linearGradient>
+    <linearGradient id="landD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9781a"/>
+      <stop offset="1" stop-color="#9c5a12"/>
+    </linearGradient>
+    <linearGradient id="sunD" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6dc"/>
+      <stop offset="1" stop-color="#ffd589"/>
+    </linearGradient>
+    <clipPath id="seedClipD">
+      <path d="M50 96 C68 90 80 71 80 53 C80 45 77 40 71 35 L73 15 L61 30 L50 7 L39 30 L27 15 L29 35 C23 40 20 45 20 53 C20 71 32 90 50 96 Z"/>
+    </clipPath>
+  </defs>
+  <path d="M50 96 C68 90 80 71 80 53 C80 45 77 40 71 35 L73 15 L61 30 L50 7 L39 30 L27 15 L29 35 C23 40 20 45 20 53 C20 71 32 90 50 96 Z" fill="url(#landD)"/>
+  <g clip-path="url(#seedClipD)">
+    <rect x="0" y="0" width="100" height="56" fill="url(#skyD)"/>
+    <path d="M39 56 A11 11 0 0 1 61 56 Z" fill="url(#sunD)"/>
+    <rect x="0" y="55.2" width="100" height="1.4" fill="#7a4610" opacity="0.5"/>
+  </g>
+</svg>

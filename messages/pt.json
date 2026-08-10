@@ -79,6 +79,306 @@
       }
     }
   },
+  "HowToPlay": {
+    "eyebrow": "Como jogar",
+    "title": "Do amanhecer ao anoitecer em cinco passos",
+    "description": "Sem download, sem lobby, sem esperar por ninguém. Escolhes as tuas ordens, tomas terreno, e o mundo passa o resto do dia a tentar tirá-lo de volta.",
+    "hud": {
+      "dawn": "Amanhecer",
+      "dusk": "Anoitecer"
+    },
+    "steps": {
+      "draft": {
+        "title": "Escolhe as tuas ordens",
+        "meta": "6 na mesa, ficas com 3",
+        "body": "O dia abre com seis cartas de ordem, as mesmas seis para todos os jogadores. Escolhe três e vive com elas."
+      },
+      "expand": {
+        "title": "Toma terreno",
+        "meta": "Atacar ou aguentar",
+        "body": "Um slider divide o teu exército entre o avanço e a linha. O território alimenta a população, a população alimenta o avanço seguinte, e um rio agarrado cedo vale o dobro em tropas."
+      },
+      "pulse": {
+        "title": "Aproveita os Pulsos do Mundo",
+        "meta": "A cada 2 a 4 min",
+        "body": "Os rios transbordam, as falhas rasgam a terra, um cofre abre-se longe dali. A seed dispara o mesmo Pulso ao mesmo segundo para toda a gente, por isso a única diferença é o que fazes com ele."
+      },
+      "collapse": {
+        "title": "Sobrevive ao Colapso",
+        "meta": "O mapa fecha-se",
+        "body": "Ao anoitecer o mundo desfaz-se pelas bordas e o chão onde podes estar encolhe. Quem ainda estiver a segurar alguma coisa quando ele parar leva o último confronto."
+      },
+      "share": {
+        "title": "Publica a grelha e sobe na liga",
+        "meta": "Sem spoilers",
+        "body": "Pontuação, comparação com os ghosts e uma grelha sem spoilers do teu mundo. Atira-a para o grupo e vê o percentil do dia cair na tua liga semanal."
+      }
+    }
+  },
+  "World": {
+    "eyebrow": "O mundo de hoje",
+    "title": "Põe a mão no mapa",
+    "description": "Um número semeou este mundo, e é o mesmo mundo de cada vez que carrega. Leva o teu Seeded por ele, gasta uma ordem, e vê o terreno mudar de dono debaixo dos teus pés.",
+    "board": "O mapa de hoje",
+    "help": "Escolhe qualquer terreno e o teu Seeded marcha até lá, tomando cada hexágono pelo caminho. Arma primeiro uma ordem e a mesma escolha gasta a ordem em vez disso. As setas andam pelo mapa, Enter confirma, Escape devolve a carta.",
+    "orders": "A tua mão",
+    "aim": "Armada. Escolhe onde cai.",
+    "reset": "Semeia outra vez",
+    "note": "O mesmo motor, os mesmos hexágonos, a mesma seed única para toda a gente. Um dia inteiro traz rivais do outro lado daquela fronteira, um Pulso do Mundo a cada poucos minutos, e o Colapso a fechar com o relógio a andar.",
+    "terrain": {
+      "abyss": "Água funda",
+      "sea": "Mar aberto",
+      "shelf": "Baixios",
+      "shore": "Costa",
+      "plain": "Planície",
+      "forest": "Floresta",
+      "hill": "Colinas",
+      "peak": "Pico",
+      "snow": "Linha da neve"
+    },
+    "holder": {
+      "you": "teu",
+      "neutral": "terreno livre",
+      "rival": "da Casa {house}"
+    },
+    "structure": {
+      "city": "cidade",
+      "port": "porto",
+      "forge": "forja de relíquias",
+      "wonder": "maravilha",
+      "camp": "acampamento de saqueadores",
+      "chest": "cofre"
+    },
+    "tile": {
+      "plain": "{terrain}, {holder}",
+      "structure": "{terrain}, {holder}, {structure}",
+      "commander": "{terrain}, {holder}, o teu Seeded está aqui",
+      "both": "{terrain}, {holder}, {structure}, o teu Seeded está aqui"
+    },
+    "report": {
+      "march": "{count, plural, =0 {O teu Seeded já está aí.} one {Marchou um hexágono e tomou-o.} other {Marchou # hexágonos e tomou-os todos.}}",
+      "expand": "{count, plural, =0 {Não há terreno livre ao alcance. Aponta a sítio mais vazio.} one {Expandir tomou um hexágono.} other {Expandir tomou # hexágonos.}}",
+      "blitz": "{count, plural, =0 {Não há nada para atacar nessa linha.} one {A Blitz enfiou-se um hexágono adentro.} other {A Blitz enfiou-se # hexágonos adentro.}}",
+      "fortify": "{count, plural, =0 {Não tens linha nenhuma para aguentar ali.} one {Fortificar amuralhou um hexágono da tua fronteira.} other {Fortificar amuralhou # hexágonos da tua fronteira.}}",
+      "storm": "{count, plural, =0 {A tempestade passou por terreno livre e não levou nada.} one {A tempestade virou um hexágono rival.} other {A tempestade virou # hexágonos rivais.}}"
+    }
+  },
+  "Game": {
+    "hud": {
+      "world": "Mundo",
+      "condition": "Condição",
+      "decree": "Decreto",
+      "dusk": "Anoitece em",
+      "minimap": "O mundo num relance",
+      "conditions": {
+        "conquest": "Conquista",
+        "domination": "Domínio",
+        "relicHunt": "Caça às Relíquias",
+        "blitz": "Blitz",
+        "lastBanner": "Último Estandarte",
+        "wonders": "Maravilhas",
+        "secretOrders": "Ordens Seladas"
+      },
+      "decrees": {
+        "twinRelics": "Relíquias Gémeas",
+        "longNight": "Noite Longa",
+        "swiftOrders": "Ordens Rápidas",
+        "guardedSpoils": "Despojos Guardados"
+      },
+      "force": {
+        "label": "Divisão do exército",
+        "attack": "Ataque",
+        "hold": "Defesa",
+        "value": "{attack}% em ataque, {hold}% em defesa"
+      },
+      "abilities": {
+        "label": "Habilidades do comandante",
+        "charge": "Carga",
+        "bombard": "Bombardeamento",
+        "wall": "Muralha",
+        "fleet": "Reposicionar Frota"
+      },
+      "standings": {
+        "label": "Classificação das Casas",
+        "title": "Casas",
+        "held": "Terreno",
+        "you": "Tu",
+        "houses": {
+          "gold": "Brasa",
+          "teal": "Maré",
+          "violet": "Véu",
+          "danger": "Cinza"
+        }
+      }
+    },
+    "cards": {
+      "meta": "{rarity}, custo {cost}",
+      "rarity": {
+        "common": "Comum",
+        "uncommon": "Incomum",
+        "rare": "Rara"
+      },
+      "expand": {
+        "name": "Expandir",
+        "effect": "Empurra todas as frentes um anel ao mesmo tempo, em vez de uma de cada vez."
+      },
+      "blitz": {
+        "name": "Blitz",
+        "effect": "Um golpe fino, enfiado bem fundo. O avanço largo é o que paga."
+      },
+      "fortify": {
+        "name": "Fortificar",
+        "effect": "Troca o avanço por uma linha que aguenta enquanto olhas para outro lado."
+      },
+      "landing": {
+        "name": "Desembarque",
+        "effect": "Atravessa mar aberto até uma costa que a tua linha da frente não alcança."
+      },
+      "sabotage": {
+        "name": "Sabotagem",
+        "effect": "Corta o abastecimento de um rival onde ele é fino, e deixa a frente sentir."
+      },
+      "storm": {
+        "name": "Chama-Tempestades",
+        "effect": "Chama o tempo sobre um pedaço do mapa. Ninguém se move bem debaixo dele, tu incluído."
+      },
+      "nuke": {
+        "name": "Ogiva",
+        "effect": "Desfaz uma região. O chão fica destruído, e toda a gente viu quem foi."
+      }
+    }
+  },
+  "Modes": {
+    "eyebrow": "Modos",
+    "title": "Seis maneiras de tomar um mundo",
+    "description": "O mundo diário é o ritual. Tudo à volta é onde aqueces, subes e constróis mundos teus.",
+    "items": {
+      "daily": {
+        "badge": "Modo principal",
+        "title": "Desafio Diário",
+        "body": "Um mundo, uma seed, uma tentativa. Faz o draft, conquista, cumpre a condição do dia e entra na mesma tabela que toda a gente. 7 a 25 minutos."
+      },
+      "blitz": {
+        "badge": "3 a 5 min",
+        "title": "Blitz",
+        "body": "Um mundo aleatório e um pavio curto. O arco inteiro, da primeira fronteira ao Colapso, no tempo de esperar pelo autocarro."
+      },
+      "ranked": {
+        "badge": "Era",
+        "title": "Ranked",
+        "body": "De Bronze a Lenda num conjunto curado que roda a cada Era. Tema novo, cartas novas, reset suave e recompensas que chegam para lá do meio da tabela."
+      },
+      "weekly": {
+        "badge": "Semanal",
+        "title": "Eventos Semanais",
+        "body": "Os Decretos acumulam-se e a dificuldade sobe um nível de cada vez. Vai tão fundo quanto aguentares e fica com as recompensas de cada nível."
+      },
+      "forge": {
+        "badge": "Personalizado",
+        "title": "A Forja",
+        "body": "Escolhe a seed, o tamanho e os Decretos, e passa o código aos teus amigos. O mesmo mundo, as mesmas regras, sem desculpas."
+      },
+      "bots": {
+        "badge": "Offline",
+        "title": "Escaramuça",
+        "body": "Três dificuldades de bots, os Decretos que te apetecerem, sem relógio e sem tabela. É aqui que se aprendem as aberturas."
+      }
+    },
+    "band": {
+      "eyebrow": "O ciclo",
+      "title": "Os mundos morrem. A tua lenda não.",
+      "body": "Um mundo dura um dia. A streak, o lugar na liga e a coleção que construíste nele passam para todos os mundos seguintes, e nada disso está à venda.",
+      "hooks": {
+        "ritual": {
+          "title": "Um ritual diário",
+          "body": "Um mundo por dia, o mesmo mapa para o planeta inteiro, desfeito ao anoitecer."
+        },
+        "streak": {
+          "title": "Streaks",
+          "body": "Apareces ao amanhecer e a contagem cresce. Falhas um e volta tudo ao início."
+        },
+        "leagues": {
+          "title": "Ligas",
+          "body": "Cada resultado diário acumula numa liga semanal e num lugar na Era."
+        },
+        "collection": {
+          "title": "Coleção",
+          "body": "Cartas, relíquias, estandartes e cores de território que o mapa inteiro vê."
+        },
+        "fair": {
+          "title": "Nunca pay-to-win",
+          "body": "O Diário e o Ranked dão a toda a gente o mesmo conjunto. O dinheiro compra visual, nunca poder."
+        }
+      }
+    }
+  },
+  "Share": {
+    "eyebrow": "A prova",
+    "title": "Toda a gente jogou o mundo de hoje. Publica o teu.",
+    "description": "Uma partida acaba numa grelha que não estraga nada a ninguém, num lugar na tabela do dia e num percentil que te segue até à Era.",
+    "result": {
+      "label": "Mundo {world}",
+      "condition": "Conquista",
+      "territory": "Território",
+      "time": "Feito em",
+      "percentile": "Top",
+      "copy": "Copiar grelha",
+      "copied": "Copiado",
+      "note": "Só cores e forma. Ninguém vê o caminho que fizeste.",
+      "shareTitle": "Seedreign · Mundo {world}",
+      "shareLine": "Conquista · {territory}% · {time}"
+    },
+    "board": {
+      "eyebrow": "Tabela de hoje",
+      "title": "Depois ficas a saber onde isso te pôs",
+      "body": "Uma seed para o planeta inteiro dá uma classificação honesta. Cada percentil diário acumula na liga semanal, e a liga no teu lugar na Era.",
+      "you": "Tu",
+      "live": "{count} Seeded hoje"
+    }
+  },
+  "Faq": {
+    "eyebrow": "Perguntas",
+    "title": "Respostas diretas",
+    "description": "Tudo o que se pergunta antes do primeiro mundo, sem voz de marketing.",
+    "items": {
+      "free": {
+        "question": "É grátis?",
+        "answer": "É. O jogo inteiro, todos os modos, todos os dias. Os cosméticos e o Era Pass são a única coisa que custa dinheiro, e nenhum deles ganha um mundo por ti."
+      },
+      "install": {
+        "question": "Preciso de instalar alguma coisa?",
+        "answer": "Não. Corre no separador que já tens aberto. Podes adicioná-lo ao ecrã principal se o quiseres a um toque, mas isso é um atalho, não um download."
+      },
+      "fair": {
+        "question": "É pay-to-win?",
+        "answer": "Não, e está construído para nunca poder ser. O Diário e o Ranked dão a toda a gente o mesmo conjunto vindo da seed do dia, nunca da tua coleção, e nenhuma carta tem níveis ou stats que se comprem."
+      },
+      "mobile": {
+        "question": "Funciona no telemóvel?",
+        "answer": "Foi desenhado primeiro para telemóvel: vertical, um polegar, e leve o suficiente para correr em hardware com uns anos. No computador é o mesmo jogo com mais espaço."
+      },
+      "length": {
+        "question": "Quanto tempo dura um mundo?",
+        "answer": "Entre 7 e 25 minutos, e acaba estejas pronto ou não. O Colapso fecha o mapa, por isso nada se arrasta."
+      },
+      "account": {
+        "question": "Preciso de conta?",
+        "answer": "Para jogar, não. Precisas de uma para manter a streak, segurar um lugar na liga e levar a coleção de um mundo para o outro, e faz-se num instante."
+      }
+    },
+    "more": "Ficou alguma coisa por dizer?",
+    "discord": "Pergunta no Discord"
+  },
+  "FinalCta": {
+    "eyebrow": "O mundo de hoje já foi semeado",
+    "title": "Toma-o antes que o Colapso o tome",
+    "description": "O mesmo mapa, a mesma seed, a mesma hipótese que toda a gente na tabela. Quando o mundo se desfizer, o que ainda tiveres na mão é a pontuação.",
+    "play": "Jogar",
+    "note": "Grátis. Sem download, sem conta, um toque.",
+    "hud": {
+      "dusk": "Anoitece em"
+    }
+  },
   "NotFound": {
     "code": "404",
     "title": "Este mundo colapsou",
@@ -87,5 +387,285 @@
   },
   "LocaleSwitcher": {
     "label": "Idioma"
+  },
+  "Play": {
+    "meta": {
+      "title": "Jogar",
+      "description": "Conquista o mundo de hoje antes que ele colapse ao anoitecer. Uma seed para todos, uma lenda para ti."
+    },
+    "common": {
+      "back": "Voltar",
+      "play": "Jogar",
+      "claim": "Recolher",
+      "shards": "Fragmentos",
+      "gems": "Gemas"
+    },
+    "hub": {
+      "eraBadge": "Era {number}",
+      "daily": {
+        "kicker": "A Sementeira de hoje",
+        "assigned": "O mundo de hoje marcha sob este estandarte.",
+        "streak": "{count, plural, one {sequência de # dia} other {sequência de # dias}}",
+        "play": "Jogar",
+        "playedLabel": "A tua corrida oficial",
+        "topPercent": "Top {percent}% de todos os Semeados hoje",
+        "board": "Tabela",
+        "practice": "Treinar",
+        "spent": "A tua corrida oficial deste mundo já foi gasta."
+      },
+      "weekly": {
+        "heat": "Calor {level}"
+      },
+      "skirmish": {
+        "size": {
+          "small": "Mundo pequeno",
+          "large": "Mundo vasto"
+        }
+      },
+      "forge": {
+        "codeLabel": "Código da Forja",
+        "placeholder": "CÓDIGO DO MUNDO",
+        "sow": "Semear"
+      },
+      "armory": "Arsenal",
+      "league": {
+        "points": "{points} pts",
+        "daysLeft": "{days, plural, one {falta # dia} other {faltam # dias}}"
+      },
+      "recap": {
+        "title": "A {era} chegou ao fim",
+        "body": "Terminaste em {tier} com {points} pontos. {gems} Gemas juntam-se ao teu tesouro."
+      },
+      "stats": "{matches} partidas · melhor {best}",
+      "reset": "Apagar a minha lenda",
+      "resetConfirm": "Toca outra vez. Tudo arde."
+    },
+    "modes": {
+      "daily": {
+        "title": "Desafio Diário"
+      },
+      "blitz": {
+        "title": "Blitz",
+        "blurb": "Um mundo pequeno, um relógio rápido. Entrar e sair."
+      },
+      "weekly": {
+        "title": "Evento Semanal",
+        "blurb": "Um decreto, calor crescente, recompensas por nível."
+      },
+      "skirmish": {
+        "title": "Escaramuça",
+        "blurb": "As tuas regras, os teus rivais, sem riscos."
+      },
+      "forge": {
+        "title": "Forja",
+        "blurb": "Semeia um mundo a partir de um código e passa-o adiante."
+      }
+    },
+    "difficulty": {
+      "0": "Rebento",
+      "1": "Veterano",
+      "2": "Soberano"
+    },
+    "draft": {
+      "kicker": "O Draft",
+      "title": "Escolhe as tuas ordens",
+      "subtitle": "Seis na mesa, as mesmas seis para todos. Ficas com {keep}.",
+      "assigned": "A seed escolheu o teu comandante hoje.",
+      "count": "{kept} de {keep} escolhidas",
+      "confirm": "Marchar"
+    },
+    "match": {
+      "pause": "Pausa",
+      "pausedTitle": "O mundo sustém a respiração",
+      "resume": "Retomar",
+      "abandon": "Abandonar o dia",
+      "practice": "Treino",
+      "troops": "tropas",
+      "held": "{percent}% conquistado",
+      "victory": "O mundo é teu",
+      "duskFalls": "Cai o anoitecer",
+      "collapseBegins": "O Colapso começou",
+      "eliminated": "A Casa {house} caiu",
+      "forgeLost": "Um rival reclamou a Forja",
+      "wonderTaken": "A Casa {house} detém a Maravilha",
+      "cannotReach": "Não há caminho até aí. Toma um porto, ou chega por Desembarque.",
+      "relics": {
+        "kicker": "A Forja arde",
+        "title": "Escolhe uma relíquia"
+      },
+      "mapLabel": "Mapa do mundo. As setas apontam, PageUp e PageDown tomam as diagonais, Enter ataca."
+    },
+    "results": {
+      "kickerWorld": "Mundo {world}",
+      "titleWin": "O mundo é teu",
+      "titlePlace": "Ficaste em {place}º",
+      "score": "Pontuação",
+      "rankLine": "Posição {rank} de {total} · top {percent}%",
+      "spoils": "Espólios",
+      "reward": {
+        "base": "Entrar em campo",
+        "score": "Pontuação",
+        "placement": "Classificação",
+        "firstOfDay": "Primeira Sementeira do dia",
+        "streak": "Sequência",
+        "heat": "Calor semanal superado",
+        "total": "Fragmentos ganhos"
+      },
+      "eraPoints": "+{points} pontos de Era",
+      "gridTitle": "A forma do teu dia",
+      "gridNote": "Só cores e forma. Ninguém vê o caminho que tomaste.",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "shareTitle": "Seedreign · Mundo {world}",
+      "shareTitleCasual": "Seedreign · {mode}",
+      "shareLine": "{condition} · {territory}% · {score}",
+      "backHub": "Voltar ao centro",
+      "board": "Tabela",
+      "again": "Outra vez",
+      "practice": "Treinar"
+    },
+    "armory": {
+      "title": "O Arsenal",
+      "subtitle": "Identidade, nunca poder. Uma skin muda o teu retrato, o teu estandarte e o padrão que o mapa inteiro vê no teu território.",
+      "passive": "Passiva",
+      "equip": "Equipar",
+      "equipped": "Equipada",
+      "tierFree": "Tua",
+      "tierGems": "Prémio de Era",
+      "gemsNote": "As Gemas forjam-se quando uma Era termina. Quanto mais alto estiveres, mais rico o veio."
+    },
+    "boards": {
+      "title": "As Tabelas",
+      "tabDaily": "Mundo {world}",
+      "tabEra": "Escada da Era",
+      "seededToday": "{count} semeados hoje",
+      "you": "Tu",
+      "notPlayed": "Conquista o mundo de hoje e o teu nome entra nesta tabela.",
+      "eraLine": "{points} pontos · {days, plural, one {# dia} other {# dias}} até a Era colapsar",
+      "eraNote": "Quando a Era colapsa, as Gemas são pagas segundo o escalão em que estiveres."
+    },
+    "commanders": {
+      "warden": {
+        "name": "Auren",
+        "title": "O Guardião da Aurora",
+        "abilityName": "Baluarte",
+        "ability": "Ergue muralhas instantâneas no teu território em redor da mira.",
+        "passive": "As tuas muralhas aguentam mais tempo e custam caro aos rivais."
+      },
+      "reaver": {
+        "name": "Kessa",
+        "title": "A Ceifadora de Cinzas",
+        "abilityName": "Senda de Guerra",
+        "ability": "Por um instante, as tuas frentes avançam mais depressa e batem mais forte.",
+        "passive": "O teu exército cresce mais depressa enquanto uma frente tua arde."
+      },
+      "tidecaller": {
+        "name": "Maru",
+        "title": "O Chamador das Marés",
+        "abilityName": "Corrente Viva",
+        "ability": "Emerge em qualquer costa e reclama uma cabeça de praia vinda do mar.",
+        "passive": "O mar está sempre aberto para ti, e os desembarques custam menos."
+      }
+    },
+    "skins": {
+      "warden-dawn": "Vanguarda da Aurora",
+      "warden-gilded": "Égide Dourada",
+      "warden-verdant": "Rito Verdejante",
+      "warden-solar": "Soberano Solar",
+      "reaver-ashmarch": "Marcha de Cinzas",
+      "reaver-emberwake": "Rasto de Brasas",
+      "reaver-thornveil": "Véu de Espinhos",
+      "reaver-crimson": "Rito Carmesim",
+      "tide-brine": "Andarilho do Sal",
+      "tide-pearl": "Corrente de Pérola",
+      "tide-undertow": "Ressaca",
+      "tide-aurora": "Maré de Aurora"
+    },
+    "relics": {
+      "emberHeart": {
+        "name": "Coração de Brasa",
+        "desc": "O teu exército cresce 18% mais depressa, mas só podes conduzir uma frente de cada vez."
+      },
+      "bulwarkSigil": {
+        "name": "Sigilo do Baluarte",
+        "desc": "As tuas muralhas nunca ruem sozinhas, e Fortificar alcança mais quatro casas."
+      },
+      "tideCharm": {
+        "name": "Amuleto das Marés",
+        "desc": "O mar abre-se para ti. Costas distantes custam pouco mais do que terra firme."
+      },
+      "huntersMark": {
+        "name": "Marca do Caçador",
+        "desc": "Cada baú no mapa rende-te um espólio extra."
+      },
+      "warBanner": {
+        "name": "Estandarte de Guerra",
+        "desc": "As tuas frentes tomam uma casa extra por avanço, mas cada conquista custa um pouco mais."
+      },
+      "stillRoot": {
+        "name": "Raiz Serena",
+        "desc": "O Colapso poupa o terreno em redor da tua capital até ao fim."
+      }
+    },
+    "medals": {
+      "unbroken": {
+        "name": "Inquebrável",
+        "desc": "Nunca perdeste uma casa para um rival."
+      },
+      "avalanche": {
+        "name": "Avalanche",
+        "desc": "Tomaste noventa casas num só dia."
+      },
+      "warlord": {
+        "name": "Senhor da Guerra",
+        "desc": "Removeste duas Casas do mapa."
+      },
+      "seeker": {
+        "name": "Buscador",
+        "desc": "Acumulaste os baús e as relíquias do mundo."
+      },
+      "survivor": {
+        "name": "Sobrevivente",
+        "desc": "De pé quando caiu o anoitecer."
+      }
+    },
+    "pulses": {
+      "flood": {
+        "title": "A Cheia sobe"
+      },
+      "vault": {
+        "title": "Um Cofre abre-se"
+      },
+      "bounty": {
+        "title": "Recompensa pela coroa"
+      },
+      "surge": {
+        "title": "A Torrente"
+      }
+    },
+    "tiers": {
+      "bronze": "Bronze",
+      "silver": "Prata",
+      "gold": "Ouro",
+      "platinum": "Platina",
+      "diamond": "Diamante",
+      "legend": "Lenda"
+    },
+    "eras": {
+      "names": {
+        "frost": "Era da Geada",
+        "thaw": "Era do Degelo",
+        "bloom": "Era da Floração",
+        "storm": "Era das Tempestades",
+        "ember": "Era das Brasas",
+        "zenith": "Era do Zénite",
+        "harvest": "Era da Colheita",
+        "dusk": "Era do Crepúsculo",
+        "mist": "Era das Brumas",
+        "hollow": "Era do Vazio",
+        "long-night": "Era da Longa Noite",
+        "rebirth": "Era do Renascer"
+      }
+    }
   }
 }

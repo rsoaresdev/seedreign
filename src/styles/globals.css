@@ -25,10 +25,31 @@
   --seed-gold: #f6b73c;
   --seed-teal: #43c7bd;
   --seed-violet: #b48cf0;
+  /* The pale sun cresting the horizon in the brand mark. */
+  --seed-sun: #fff2d0;
 
   /* Status colours, tuned for legibility on #0a0e16. */
   --seed-danger: #ff6b6b;
   --seed-success: #46d39a;
+
+  /* The husk of the seed, below the horizon in the brand mark. */
+  --seed-bark: #c9781a;
+  --seed-bark-deep: #9c5a12;
+
+  /*
+    The map. A neutral slate ramp on purpose: the four house colours are what
+    has to carry a glance, so the ground they are fighting over never competes
+    with them. Ordered sea floor to snow line.
+  */
+  --seed-map-abyss: #060a11;
+  --seed-map-sea: #0c1524;
+  --seed-map-shelf: #13233b;
+  --seed-map-shore: #2c3959;
+  --seed-map-plain: #1a2740;
+  --seed-map-forest: #16273c;
+  --seed-map-hill: #253656;
+  --seed-map-peak: #3b4e75;
+  --seed-map-snow: #5a6d94;
 
   /*
     Tints and edges are written out literally instead of being derived with
@@ -149,6 +170,20 @@
   --color-seed-gold: var(--seed-gold);
   --color-seed-teal: var(--seed-teal);
   --color-seed-violet: var(--seed-violet);
+  --color-seed-sun: var(--seed-sun);
+  --color-seed-bark: var(--seed-bark);
+  --color-seed-bark-deep: var(--seed-bark-deep);
+
+  /* The map ramp: fill-seed-map-plain, bg-seed-map-sea and so on. */
+  --color-seed-map-abyss: var(--seed-map-abyss);
+  --color-seed-map-sea: var(--seed-map-sea);
+  --color-seed-map-shelf: var(--seed-map-shelf);
+  --color-seed-map-shore: var(--seed-map-shore);
+  --color-seed-map-plain: var(--seed-map-plain);
+  --color-seed-map-forest: var(--seed-map-forest);
+  --color-seed-map-hill: var(--seed-map-hill);
+  --color-seed-map-peak: var(--seed-map-peak);
+  --color-seed-map-snow: var(--seed-map-snow);
 
   /* Pre-mixed tints. Use these instead of `bg-seed-gold/10`. */
   --color-seed-gold-tint: var(--seed-gold-tint);
@@ -268,6 +303,58 @@
     80% {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  /*
+    The shared result grid writing itself out, cell by cell.
+
+    Unlike the wave above, this one has a long hold in the middle: with the
+    stagger the callers use, there is a window of roughly two seconds where
+    every cell is lit at once, which is the moment the grid is actually about.
+  */
+  --animate-grid-drop: grid-drop 6s ease-in-out infinite backwards;
+
+  @keyframes grid-drop {
+    0% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+    6%,
+    88% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+  }
+
+  /* Radix reports the panel height as a custom property, so the panel can be
+     animated to its own height without measuring anything in JavaScript. */
+  --animate-accordion-down: accordion-down 0.24s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-in;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
     }
   }
 

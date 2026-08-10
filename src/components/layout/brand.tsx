@@ -7,24 +7,25 @@ import { cn } from "@/lib/utils";
 export function SeedMark({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 100 100"
       aria-hidden="true"
       focusable="false"
       className={cn("size-7", className)}
     >
+      {/* The seed, crowned by its rays. Painted in the sky first so the
+          silhouette carries the sky itself: no clip, and nothing to collide
+          with when the mark renders more than once on a page. */}
       <path
-        d="M16 4.5c5 3.5 7.8 7.4 7.8 11.6 0 4.5-3.5 8.1-7.8 8.1s-7.8-3.6-7.8-8.1C8.2 11.9 11 8 16 4.5Z"
+        d="M50 96 C68 90 80 71 80 53 C80 45 77 40 71 35 L73 15 L61 30 L50 7 L39 30 L27 15 L29 35 C23 40 20 45 20 53 C20 71 32 90 50 96 Z"
         className="fill-seed-gold"
       />
+      {/* The world reborn: a sun cresting the horizon. */}
+      <path d="M39 56 A11 11 0 0 1 61 56 Z" className="fill-seed-sun" />
+      {/* The husk, below the horizon. Its curve is the silhouette's own outline
+          cut at y=56, so the two edges land on each other exactly. */}
       <path
-        d="M16 12.2c2 1.5 3.1 3.1 3.1 5 0 2.1-1.4 3.7-3.1 3.7s-3.1-1.6-3.1-3.7c0-1.9 1.1-3.5 3.1-5Z"
-        className="fill-seed-bg"
-      />
-      <path
-        d="M16 24.2v3.3"
-        className="stroke-seed-teal"
-        strokeWidth="2"
-        strokeLinecap="round"
+        d="M20.11 56 C21.35 73.07 33 90.33 50 96 C67 90.33 78.65 73.07 79.89 56 Z"
+        className="fill-seed-bark"
       />
     </svg>
   );
