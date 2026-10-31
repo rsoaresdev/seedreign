@@ -1,14 +1,16 @@
 # Seedreign
 
+![Seedreign: conquer today's world before it collapses](.github/assets/cover.png)
+
 Territory conquest `.io` strategy game. One procedurally generated world is sown
 every dawn, the same seed for everyone, and it collapses at nightfall.
 
-> The design bible lives in [`CLAUDE.md`](./CLAUDE.md). It is the source of
-> truth for every product, economy and technical decision. Read it before
-> changing anything.
+**Status: early development.** This repository holds the website: the landing
+page, profile and sign-in, with the game canvas to follow on the same domain.
+The game itself is not playable yet.
 
-This repository is the **web surface**: landing page, profile, auth and later
-the game canvas, all served from a single domain, path based.
+The full game design (lore, mechanics, economy and technical decisions) is in
+[`CLAUDE.md`](./CLAUDE.md). Read it before changing anything.
 
 ## Getting started
 
@@ -90,3 +92,7 @@ src/i18n/                  routing, request config, navigation helpers
 src/lib/                   site config and shared utilities
 src/styles/                global stylesheet and design tokens
 ```
+
+## License
+
+[MIT](LICENSE)
